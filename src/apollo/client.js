@@ -21,7 +21,7 @@ export const clients = {
   }),
   [SupportedNetwork.MATIC]: new ApolloClient({
     link: new HttpLink({
-      uri: "https://api.thegraph.com/subgraphs/name/1hive/honeyswap-polygon",
+      uri: "https://api.thegraph.com/subgraphs/name/tetcoin/metroswap-polygon",
     }),
     cache: new InMemoryCache(),
     shouldBatch: true,

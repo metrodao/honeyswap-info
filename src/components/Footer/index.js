@@ -5,7 +5,7 @@ import Link from "../Link";
 
 const links = [
   { url: "https://1hive.org", text: "About" },
-  { url: "https://github.com/1Hive/honeyswap-info", text: "Code" },
+  { url: "https://github.com/metroswap/metroswap-info", text: "Code" },
 ];
 
 const FooterLink = ({ children, ...rest }) => (

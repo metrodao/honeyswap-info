@@ -70,7 +70,7 @@
     "wcag-contrast": "^3.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=7017 react-scripts start",
     "build": "cross-env GENERATE_SOURCEMAP=false react-app-rewired build",
     "ipfs-build": "cross-env PUBLIC_URL=\".\" GENERATE_SOURCEMAP=false react-app-rewired build",
     "eject": "react-scripts eject"

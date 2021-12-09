@@ -284,32 +284,32 @@ async function getGlobalData(
       query: GLOBAL_DATA(factoryAddress),
       fetchPolicy: "network-only",
     });
-    data = result.data.honeyswapFactories[0];
+    data = result.data.uniswapFactories[0];
 
     // fetch the historical data
     let oneDayResult = await client.query({
       query: GLOBAL_DATA(factoryAddress, oneDayBlock?.number),
       fetchPolicy: "network-only",
     });
-    oneDayData = oneDayResult.data.honeyswapFactories[0];
+    oneDayData = oneDayResult.data.uniswapFactories[0];
 
     let twoDayResult = await client.query({
       query: GLOBAL_DATA(factoryAddress, twoDayBlock?.number),
       fetchPolicy: "network-only",
     });
-    twoDayData = twoDayResult.data.honeyswapFactories[0];
+    twoDayData = twoDayResult.data.uniswapFactories[0];
 
     let oneWeekResult = await client.query({
       query: GLOBAL_DATA(factoryAddress, oneWeekBlock?.number),
       fetchPolicy: "network-only",
     });
-    const oneWeekData = oneWeekResult.data.honeyswapFactories[0];
+    const oneWeekData = oneWeekResult.data.uniswapFactories[0];
 
     let twoWeekResult = await client.query({
       query: GLOBAL_DATA(factoryAddress, twoWeekBlock?.number),
       fetchPolicy: "network-only",
     });
-    const twoWeekData = twoWeekResult.data.honeyswapFactories[0];
+    const twoWeekData = twoWeekResult.data.uniswapFactories[0];
 
     // format the total liquidity in USD
     data.totalLiquidityUSD =
@@ -377,8 +377,8 @@ const getChartData = async (client, oldestDateToFetch) => {
         fetchPolicy: "network-only",
       });
       skip += 1000;
-      data = data.concat(result.data.honeyswapDayDatas);
-      if (result.data.honeyswapDayDatas.length < 1000) {
+      data = data.concat(result.data.uniswapDayDatas);
+      if (result.data.uniswapDayDatas.length < 1000) {
         allFound = true;
       }
     }

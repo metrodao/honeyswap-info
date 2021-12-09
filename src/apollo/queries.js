@@ -4,7 +4,7 @@ import { BUNDLE_ID, FACTORY_ADDRESS, SupportedNetwork } from "../constants";
 const FACTORY_STARTING_BLOCK = {
   // [FACTORY_ADDRESS[SupportedNetwork.MAINNET]]: 10000000,
   [FACTORY_ADDRESS[SupportedNetwork.XDAI]]: 11813490,
-  [FACTORY_ADDRESS[SupportedNetwork.MATIC]]: 14599890,
+  [FACTORY_ADDRESS[SupportedNetwork.MATIC]]: 22270408,
 };
 
 export const SUBGRAPH_HEALTH = gql`
@@ -405,8 +405,8 @@ export const PAIR_DAY_DATA_BULK = (pairs, startTimestamp) => {
 };
 
 export const GLOBAL_CHART = gql`
-  query honeyswapDayDatas($startTime: Int!, $skip: Int!) {
-    honeyswapDayDatas(
+  query uniswapDayDatas($startTime: Int!, $skip: Int!) {
+    uniswapDayDatas(
       first: 1000
       skip: $skip
       where: { date_gt: $startTime }
@@ -425,8 +425,8 @@ export const GLOBAL_CHART = gql`
 `;
 
 export const GLOBAL_DATA = (factoryAddress, block) => {
-  const queryString = ` query honeyswapFactories {
-      honeyswapFactories(
+  const queryString = ` query uniswapFactories {
+      uniswapFactories(
        ${
          block
            ? `block: { number: ${
