@@ -18,7 +18,7 @@ export const SupportedNetworkForChainId = Object.freeze({
 
 export const FACTORY_ADDRESS = {
   // [SupportedNetwork.MAINNET]: "0xd34971BaB6E5E356fd250715F5dE0492BB070452",
-  [SupportedNetwork.XDAI]: "0xa818b4f111ccac7aa31d0bcc0806d64f2e0737d7",
+  [SupportedNetwork.XDAI]: "0x9EA3fBcF8173555e1eb7326B664BeaF1F5f86F01",
   [SupportedNetwork.MATIC]: "0x0F10f5a1006F50eDeCd086cCD5704ade25709Ab2",
 };
 

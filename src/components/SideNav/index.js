@@ -197,12 +197,17 @@ function SideNav({ history }) {
             style={{ marginLeft: ".75rem", marginBottom: "4rem" }}
           >
             <HeaderText>
+              <Link href="https://metroswap.org" target="_blank">
+                Metroswap
+              </Link>
+            </HeaderText>
+            <HeaderText>
               <Link href="https://1hive.org" target="_blank">
                 1Hive
               </Link>
             </HeaderText>
             <HeaderText>
-              <Link href="https://twitter.com/1HiveOrg" target="_blank">
+              <Link href="https://twitter.com/tetcoin" target="_blank">
                 Twitter
               </Link>
             </HeaderText>

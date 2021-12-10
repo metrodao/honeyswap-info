@@ -14,7 +14,7 @@ export const clients = {
   // }),
   [SupportedNetwork.XDAI]: new ApolloClient({
     link: new HttpLink({
-      uri: "https://api.thegraph.com/subgraphs/name/1hive/honeyswap-xdai",
+      uri: "https://api.thegraph.com/subgraphs/name/tetcoin/metroswap-xdai",
     }),
     cache: new InMemoryCache(),
     shouldBatch: true,

@@ -18,7 +18,8 @@ export async function addTokenToMetamask(ethereum, id, symbol, network) {
 
   let tokenListURL;
   if (network === SupportedNetwork.XDAI)
-    tokenListURL = "https://tokens.honeyswap.org";
+    //tokenListURL = "https://tokens.honeyswap.org";
+    tokenListURL = "https://raw.githubusercontent.com/metroswap/new-host/main/metroswap.json";
   else if (network === SupportedNetwork.MATIC)
     tokenListURL =
       "https://unpkg.com/quickswap-default-token-list@latest/build/quickswap-default.tokenlist.json";

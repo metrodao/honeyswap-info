@@ -21,7 +21,9 @@ async function getTokenLogo(network, address) {
       network === SupportedNetwork.XDAI ||
       network === SupportedNetwork.MATIC
     ) {
-      tokenListURL = "https://tokens.honeyswap.org"; // honeyswap list used for xdai and polygon
+      //tokenListURL = "https://tokens.honeyswap.org"; // honeyswap list used for xdai and polygon
+      //tokenListURL = "https://raw.githubusercontent.com/metroswap/new-host/main/list-token.tokenlist.json";
+      tokenListURL = "https://raw.githubusercontent.com/metroswap/new-host/main/metroswap.json";
     }
     const response = await fetch(tokenListURL);
     if (!response.ok) {
