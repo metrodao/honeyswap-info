@@ -6,6 +6,7 @@ const CACHE = {
   // [SupportedNetwork.MAINNET]: {},
   [SupportedNetwork.XDAI]: {},
   [SupportedNetwork.MATIC]: {},
+  [SupportedNetwork.AVALANCHE]: {}
 };
 
 async function getTokenLogo(network, address) {
@@ -24,6 +25,9 @@ async function getTokenLogo(network, address) {
       //tokenListURL = "https://tokens.honeyswap.org"; // honeyswap list used for xdai and polygon
       //tokenListURL = "https://raw.githubusercontent.com/metroswap/new-host/main/list-token.tokenlist.json";
       tokenListURL = "https://raw.githubusercontent.com/metroswap/new-host/main/metroswap.json";
+    }
+    if (network === SupportedNetwork.AVALANCHE){
+      tokenListURL = "https://raw.githubusercontent.com/metroswap/new-host/main/avalanche.json";
     }
     const response = await fetch(tokenListURL);
     if (!response.ok) {

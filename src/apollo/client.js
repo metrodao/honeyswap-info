@@ -26,6 +26,13 @@ export const clients = {
     cache: new InMemoryCache(),
     shouldBatch: true,
   }),
+  [SupportedNetwork.AVALANCHE]: new ApolloClient({
+    link: new HttpLink({
+      uri: "https://api.thegraph.com/subgraphs/name/tetcoin/metroswap-avalanche",
+    }),
+    cache: new InMemoryCache(),
+    shouldBatch: true,
+  })
 };
 
 export const healthClient = new ApolloClient({
@@ -46,7 +53,7 @@ export const blockClients = {
   // }),
   [SupportedNetwork.XDAI]: new ApolloClient({
     link: new HttpLink({
-      uri: "https://api.thegraph.com/subgraphs/name/1hive/xdai-blocks",
+      uri: "https://api.thegraph.com/subgraphs/name/elkfinance/xdai-blocks",
     }),
     cache: new InMemoryCache(),
   }),
@@ -56,4 +63,10 @@ export const blockClients = {
     }),
     cache: new InMemoryCache(),
   }),
+  [SupportedNetwork.AVALANCHE]: new ApolloClient({
+    link: new HttpLink({
+      uri: "https://api.thegraph.com/subgraphs/name/dasconnor/avalanche-blocks",
+    }),
+    cache: new InMemoryCache(),
+  })
 };

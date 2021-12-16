@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import { getShareValueOverTime } from ".";
 
 export const priceOverrides = [
-  "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83", // USDC (XDAI)
+  "0xddafbb505ad214d7b80b1f830fcCc89b60fb7a83", // USDC (XDAI)
   "0x44fa8e6f47987339850636f88629646662444217", // DAI (XDAI)
   "0x4ecaba5870353805a9f068101a40e0f32ed605c6", // USDT (XDAI)
   "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", // USDC (Polygon)

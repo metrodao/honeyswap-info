@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import styled from "styled-components";
 import MaticLogo from "../../assets/matic-logo.png";
 import xDAILogo from "../../assets/xdai-logo.png";
+import AvalancheLogo from "../../assets/avalanche-logo.png";
 import HNYLogo from "../../assets/hny-logo.png";
 import {
   useNativeCurrencyWrapper,
@@ -40,7 +41,17 @@ export default function TokenLogo({
     if (!address && !tokenIcon) return [];
     const lowercaseAddress = address.toLowerCase();
     if (lowercaseAddress === nativeCurrencyWrapper.address.toLowerCase()) {
-      return [selectedNetwork === SupportedNetwork.XDAI ? xDAILogo : MaticLogo];
+      //return [selectedNetwork === SupportedNetwork.XDAI ? xDAILogo : MaticLogo];
+      switch(SupportedNetwork){
+        case SupportedNetwork.XDAI:
+          return xDAILogo;
+        case SupportedNetwork.MATIC:
+          return MaticLogo;
+        case SupportedNetwork.AVALANCHE:
+          return AvalancheLogo;
+        default:
+          break;
+      }
     }
     if (lowercaseAddress === HNY_ADDRESS[selectedNetwork].toLowerCase()) {
       return [HNYLogo];

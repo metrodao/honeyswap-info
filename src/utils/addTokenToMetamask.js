@@ -23,6 +23,9 @@ export async function addTokenToMetamask(ethereum, id, symbol, network) {
   else if (network === SupportedNetwork.MATIC)
     tokenListURL =
       "https://unpkg.com/quickswap-default-token-list@latest/build/quickswap-default.tokenlist.json";
+  if (network === SupportedNetwork.AVALANCHE)
+    tokenListURL =
+      "https://raw.githubusercontent.com/metroswap/new-host/main/avalanche.json";
 
   const response = await fetch(tokenListURL);
 

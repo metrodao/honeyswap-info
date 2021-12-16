@@ -208,7 +208,8 @@ export function useLatestBlocks() {
     async function fetch() {
       let subgraphName;
       if (selectedNetwork === "xDAI") subgraphName = "tetcoin/metroswap-xdai";
-      else subgraphName = "tetcoin/metroswap-polygon";
+      if (selectedNetwork === "MATIC") subgraphName = "tetcoin/metroswap-polygon";
+      if (selectedNetwork === "Avalanche") subgraphName = "tetcoin/metroswap-avalanche";
 
       healthClient
         .query({

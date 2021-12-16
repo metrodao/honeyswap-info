@@ -102,6 +102,8 @@ const getExplorerPrefix = (selectedNetwork) => {
   switch (selectedNetwork) {
     case SupportedNetwork.MATIC:
       return "https://polygonscan.com";
+    case SupportedNetwork.AVALANCHE:
+      return "https://snowtrace.io";
     default:
       return "https://blockscout.com/poa/xdai";
   }

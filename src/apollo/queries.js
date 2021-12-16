@@ -3,8 +3,9 @@ import { BUNDLE_ID, FACTORY_ADDRESS, SupportedNetwork } from "../constants";
 
 const FACTORY_STARTING_BLOCK = {
   // [FACTORY_ADDRESS[SupportedNetwork.MAINNET]]: 10000000,
-  [FACTORY_ADDRESS[SupportedNetwork.XDAI]]: 11813490,
+  [FACTORY_ADDRESS[SupportedNetwork.XDAI]]: 19503131,
   [FACTORY_ADDRESS[SupportedNetwork.MATIC]]: 22270408,
+  [FACTORY_ADDRESS[SupportedNetwork.AVALANCHE]]: 8132815
 };
 
 export const SUBGRAPH_HEALTH = gql`
