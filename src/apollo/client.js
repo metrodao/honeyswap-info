@@ -32,6 +32,27 @@ export const clients = {
     }),
     cache: new InMemoryCache(),
     shouldBatch: true,
+  }),
+  [SupportedNetwork.FUSE]: new ApolloClient({
+    link: new HttpLink({
+      uri: "https://api.thegraph.com/subgraphs/name/tetcoin/metroswap-fuse",
+    }),
+    cache: new InMemoryCache(),
+    shouldBatch: true,
+  }),
+  [SupportedNetwork.BINANCE]: new ApolloClient({
+    link: new HttpLink({
+      uri: "https://api.thegraph.com/subgraphs/name/tetcoin/metroswap-bsc",
+    }),
+    cache: new InMemoryCache(),
+    shouldBatch: true,
+  }),
+  [SupportedNetwork.FANTOM]: new ApolloClient({
+    link: new HttpLink({
+      uri: "https://api.thegraph.com/subgraphs/name/tetcoin/metroswap-fantom",
+    }),
+    cache: new InMemoryCache(),
+    shouldBatch: true,
   })
 };
 
@@ -66,6 +87,24 @@ export const blockClients = {
   [SupportedNetwork.AVALANCHE]: new ApolloClient({
     link: new HttpLink({
       uri: "https://api.thegraph.com/subgraphs/name/dasconnor/avalanche-blocks",
+    }),
+    cache: new InMemoryCache(),
+  }),
+  [SupportedNetwork.FUSE]: new ApolloClient({
+    link: new HttpLink({
+      uri: "https://api.thegraph.com/subgraphs/name/fuseio/fuse-blocks",
+    }),
+    cache: new InMemoryCache(),
+  }),
+  [SupportedNetwork.BINANCE]: new ApolloClient({
+    link: new HttpLink({
+      uri: "https://api.thegraph.com/subgraphs/name/elkfinance/bsc-blocks",
+    }),
+    cache: new InMemoryCache(),
+  }),
+  [SupportedNetwork.FANTOM]: new ApolloClient({
+    link: new HttpLink({
+      uri: "https://api.thegraph.com/subgraphs/name/ducquangkstn/fantom-blocks",
     }),
     cache: new InMemoryCache(),
   })

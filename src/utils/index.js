@@ -104,6 +104,12 @@ const getExplorerPrefix = (selectedNetwork) => {
       return "https://polygonscan.com";
     case SupportedNetwork.AVALANCHE:
       return "https://snowtrace.io";
+    case SupportedNetwork.BINANCE:
+      return "https://bscscan.com";
+    case SupportedNetwork.FUSE:
+      return "https://explorer.fuse.io";
+    case SupportedNetwork.FANTOM:
+      return "https://ftmscan.com";
     default:
       return "https://blockscout.com/poa/xdai";
   }

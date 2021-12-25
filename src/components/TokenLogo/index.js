@@ -3,6 +3,9 @@ import styled from "styled-components";
 import MaticLogo from "../../assets/matic-logo.png";
 import xDAILogo from "../../assets/xdai-logo.png";
 import AvalancheLogo from "../../assets/avalanche-logo.png";
+import FuseLogo from "../../assets/fuse-logo.png";
+import BscLogo from "../../assets/bsc-logo.png";
+import FantomLogo from "../../assets/fantom-logo.png";
 import HNYLogo from "../../assets/hny-logo.png";
 import {
   useNativeCurrencyWrapper,
@@ -49,6 +52,12 @@ export default function TokenLogo({
           return MaticLogo;
         case SupportedNetwork.AVALANCHE:
           return AvalancheLogo;
+        case SupportedNetwork.FUSE:
+          return FuseLogo;
+        case SupportedNetwork.BINANCE:
+          return BscLogo;
+        case SupportedNetwork.FANTOM:
+          return FantomLogo;
         default:
           break;
       }

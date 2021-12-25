@@ -210,6 +210,8 @@ export function useLatestBlocks() {
       if (selectedNetwork === "xDAI") subgraphName = "tetcoin/metroswap-xdai";
       if (selectedNetwork === "MATIC") subgraphName = "tetcoin/metroswap-polygon";
       if (selectedNetwork === "Avalanche") subgraphName = "tetcoin/metroswap-avalanche";
+      if (selectedNetwork === "Fuse") subgraphName = "tetcoin/metroswap-fuse";
+      if (selectedNetwork === "Binance") subgraphName = "tetcoin/metroswap-bsc";
 
       healthClient
         .query({

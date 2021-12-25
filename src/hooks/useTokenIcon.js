@@ -6,7 +6,10 @@ const CACHE = {
   // [SupportedNetwork.MAINNET]: {},
   [SupportedNetwork.XDAI]: {},
   [SupportedNetwork.MATIC]: {},
-  [SupportedNetwork.AVALANCHE]: {}
+  [SupportedNetwork.AVALANCHE]: {},
+  [SupportedNetwork.FUSE]: {},
+  [SupportedNetwork.BINANCE]: {},
+  [SupportedNetwork.FANTOM]: {}
 };
 
 async function getTokenLogo(network, address) {
@@ -28,6 +31,15 @@ async function getTokenLogo(network, address) {
     }
     if (network === SupportedNetwork.AVALANCHE){
       tokenListURL = "https://raw.githubusercontent.com/metroswap/new-host/main/avalanche.json";
+    }
+    if (network === SupportedNetwork.FUSE){
+      tokenListURL = "https://raw.githubusercontent.com/metroswap/new-host/main/fuse.json";
+    }
+    if (network === SupportedNetwork.BINANCE){
+      tokenListURL = "https://raw.githubusercontent.com/metroswap/new-host/main/binance.json";
+    }
+    if (network === SupportedNetwork.FANTOM){
+      tokenListURL = "https://raw.githubusercontent.com/metroswap/new-host/main/fantom.json";
     }
     const response = await fetch(tokenListURL);
     if (!response.ok) {
